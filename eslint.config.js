@@ -1,6 +1,6 @@
 import globals from "globals";
 import js from "@eslint/js";
-import stylisticJs from "@stylistic/eslint-plugin-js";
+import stylistic from "@stylistic/eslint-plugin";
 
 export default [
     { ignores: ["dist", "Frontend", "ReactQueryFrontend", "ReactReduxFrontend"] },
@@ -15,21 +15,21 @@ export default [
             }
         },
         plugins: {
-            "@stylistic/js": stylisticJs
+            "@stylistic": stylistic
         },
         rules: {
             ...js.configs.recommended.rules,
-            "@stylistic/js/indent": ["error", 4],
-            "@stylistic/js/semi": ["error", "always"],
-            "@stylistic/js/comma-dangle": ["error", "never"],
-            "@stylistic/js/comma-spacing": ["error", { "after": true }],
-            "@stylistic/js/jsx-quotes": ["error", "prefer-double"],
-            "@stylistic/js/quotes": ["error", "double", {
+            "@stylistic/indent": ["error", 4],
+            "@stylistic/semi": ["error", "always"],
+            "@stylistic/comma-dangle": ["error", "never"],
+            "@stylistic/comma-spacing": ["error", { "after": true }],
+            "@stylistic/jsx-quotes": ["error", "prefer-double"],
+            "@stylistic/quotes": ["error", "double", {
                 "allowTemplateLiterals": "always"
             }],
             "eqeqeq": ["error", "always"],
-            "@stylistic/js/object-curly-spacing": ["error", "always"],
-            "@stylistic/js/arrow-spacing": ["error", { "before": true, "after": true }]
+            "@stylistic/object-curly-spacing": ["error", "always"],
+            "@stylistic/arrow-spacing": ["error", { "before": true, "after": true }]
         }
     }
 ];

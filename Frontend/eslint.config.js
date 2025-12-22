@@ -3,7 +3,7 @@ import js from "@eslint/js";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
-import stylisticJs from "@stylistic/eslint-plugin-js";
+import stylistic from "@stylistic/eslint-plugin";
 
 export default [
     { ignores: ["dist"] },
@@ -23,7 +23,7 @@ export default [
             react,
             "react-hooks": reactHooks,
             "react-refresh": reactRefresh,
-            "@stylistic/js": stylisticJs
+            "@stylistic": stylistic
         },
         rules: {
             ...js.configs.recommended.rules,
@@ -31,17 +31,17 @@ export default [
             ...react.configs["jsx-runtime"].rules,
             ...reactHooks.configs.recommended.rules,
             "react/prop-types": "off",
-            "@stylistic/js/indent": ["error", 4],
-            "@stylistic/js/semi": ["error", "always"],
-            "@stylistic/js/comma-dangle": ["error", "never"],
-            "@stylistic/js/comma-spacing": ["error", { "after": true }],
-            "@stylistic/js/jsx-quotes": ["error", "prefer-double"],
-            "@stylistic/js/quotes": ["error", "double", {
+            "@stylistic/indent": ["error", 4],
+            "@stylistic/semi": ["error", "always"],
+            "@stylistic/comma-dangle": ["error", "never"],
+            "@stylistic/comma-spacing": ["error", { "after": true }],
+            "@stylistic/jsx-quotes": ["error", "prefer-double"],
+            "@stylistic/quotes": ["error", "double", {
                 "allowTemplateLiterals": "always"
             }],
             "eqeqeq": ["error", "always"],
-            "@stylistic/js/object-curly-spacing": ["error", "always"],
-            "@stylistic/js/arrow-spacing": ["error", { "before": true, "after": true }]
+            "@stylistic/object-curly-spacing": ["error", "always"],
+            "@stylistic/arrow-spacing": ["error", { "before": true, "after": true }]
         }
     }
 ];
