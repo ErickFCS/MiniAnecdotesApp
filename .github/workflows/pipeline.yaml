@@ -1,0 +1,36 @@
+name: "pipeline"
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
+    types:
+      - "opened"
+      - "synchronize"
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Installing dependencies
+        run: pnpm i --recursive --frozen-lockfile
+
+      - name: Running Linting
+        run: pnpm lint
+
+      - name: Building Frontend
+        run: pnpm build
+
+      - name: Deploy to render
+        if: ${{ github.event_name == 'push' }}
+        run: curl https://api.render.com/deploy/srv-${{secrets.RENDER_SERVICE_ID}}?key=${{secrets.RENDER_API_KEY}}
