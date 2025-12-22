@@ -1,10 +1,12 @@
 # Mini Anecdotes Project
 
-This project is a mini web application built with React, Vite, and Bootstrap. It allows users to read and vote short anecdotes.
+This is a SSR Frontends compatations with a json-server backend. It includes vanilla React, React-toolkit, and a React-Query version.
 
-[Basic Preview Page](https://minianecdotesapp.onrender.com/f)
-[React Query Preview Page](https://minianecdotesapp.onrender.com/q)
-[React Redux Preview Page](https://minianecdotesapp.onrender.com/r)
+## Lives
+
+- [Vanilla React SSR Page (No BACKEND)](https://minianecdotesapp.onrender.com/f)
+- [React Query SSR Page](https://minianecdotesapp.onrender.com/q)
+- [React Redux SSR Page](https://minianecdotesapp.onrender.com/r)
 
 ## Technologies Used
 
@@ -26,38 +28,19 @@ This project is a mini web application built with React, Vite, and Bootstrap. It
 
 ### Installation
 
-1. Clone the repository:
-
-   ```bash
-   git clone <repository-url>
-   cd <repository-name>
-2. Start development vite server
-- With NPM
-
-   ```bash
-   npm install
-   npm run dev
-- With PNPM
-
-   ```bash
-   pnpm install
-   pnpm dev
-
-### Build
-
-1. Clone the repository:
-   
-   ```bash
-   git clone <repository-url>
-   cd <repository-name>
-2. Build the source
-- With NPM
-
-   ```bash
-   npm install
-   npm run build
-- With PNPM
-
-   ```bash
-   pnpm install
-   pnpm build
+1. Clone the repository
+```bash
+git clone <Repository Name>
+```
+2. Install dependencies
+```bash
+<npm or pnpm> install
+```
+3. Build the Frontends
+```bash
+<npm or pnpm> run build
+```
+4. Run the server
+```bash
+<npm or pnpm> run start
+```

@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import { initializeAnecdotes } from "./reducers/anecdoteReducer";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
