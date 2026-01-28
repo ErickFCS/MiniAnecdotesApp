@@ -61,7 +61,8 @@ async function saveDb(data) {
 
 // DYNAMIC ROUTING: Mimics json-server for any key in your JSON
 app.all("/:resource{/:id}", async (req, res) => {
-    const { resource, id } = req.params;
+    const { resource, id:_id } = req.params;
+    const id = Number(_id);
     const db = await getDb();
 
     // Check if the collection exists (e.g., db.posts)
