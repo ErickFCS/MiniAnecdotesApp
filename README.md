@@ -1,10 +1,17 @@
 # Mini Anecdotes Project
 
+<p align="center">
+  <img src="/overview.png" alt="Awesome Image" width="600">
+</p>
+
 This is a SSR Frontends compatations with a json-server backend. It includes vanilla React, React-toolkit, and a React-Query version.
 
 ## Lives
 
-- [Vanilla React SSR Page (No BACKEND)](https://minianecdotesapp.onrender.com/f)
+<p align="center">
+  <img src="/overview_f.png" alt="Awesome Image" width="600">
+</p>
+- [Vanilla React CSR Page (No BACKEND)](https://minianecdotesapp.onrender.com/f)
 - [React Query SSR Page](https://minianecdotesapp.onrender.com/q)
 - [React Redux SSR Page](https://minianecdotesapp.onrender.com/r)
 
